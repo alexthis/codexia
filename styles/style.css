@@ -32,7 +32,13 @@ header{
 a{
     text-decoration: none;
 }
-button{
+li{
+    padding-bottom: 20px;
+}
+ul li::marker {
+    color: #ff8b08;
+}
+.button-contact{
     cursor: pointer;
     margin-left: 22px;
     font-size: 1.2em;
@@ -42,7 +48,7 @@ button{
     background-color: #00000000;
     transition: all ease-in-out 0.3s;
 }
-button:hover{
+.button-contact:hover{
     color: white;
     background-color: #000000;
 }
@@ -63,6 +69,8 @@ h2, h3{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 .call, .call-right, .call-left{
     cursor: pointer;
@@ -123,8 +131,8 @@ hr.animated-line {
     grid-template-columns: 65% 35%;
 }
 .groupe-one-text{
+    z-index: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -140,15 +148,16 @@ hr.animated-line {
     animation-name: slidein-text-groupe;
 }
 .img-groupe{
+    z-index: 2;
     width: 100%;
     height: auto;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 5px;
 }
 /* contact */
-.body-contact{
-    padding: 130px;
-}
 .groupe-contact{
     display: flex;
     align-items: center;
@@ -181,10 +190,19 @@ hr.animated-line {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .icone-contact{
     margin: 20px 0px;
     margin-top: 80px;
+}
+.info-contacte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
 }
 /*projet*/
 .groupe-title-projet{
@@ -197,9 +215,13 @@ hr.animated-line {
     text-align: center;
 }
 .secondary-text-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0;
     color: #ff8b08;
     text-align: center;
+    width: 50%;
 }
 .groupe-card-projet{
     display: flex;
@@ -270,6 +292,44 @@ hr.animated-line {
     justify-content: center;
     flex-direction: column;
 }
+/* tarif*/
+.groupe-tarif-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.groupe-tarif-two{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.card-tarif{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: #c7c7c7;
+}
+.title-card-tarif{
+    text-decoration: underline;
+    text-decoration-color: #ff8b08;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tarif-title{
+    font-size: 1.6em;
+    margin-top: 25px;
+}
+.text-tarif{
+    border-left: 2px solid rgb(88, 88, 88);
+    padding-left: 5px;
+    margin-left: 15px;
+    padding-right: 20px;
+}
+.border-tarif{
+    border-right: 2px solid;
+}
 /*animation*/
 @keyframes slidein-text-groupe {
     from {
@@ -314,5 +374,43 @@ hr.animated-line {
     }
     to {
         opacity: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .call, .call-left, .call-right{
+        font-size: 0.8em;
+    }
+    .groupe-one{
+        grid-template-columns: 100%;
+    }
+    .img-groupe{
+        overflow: hidden;
+        margin-left: 35px;
+    }
+    .groupe-tarif-two{
+        grid-template-columns: 100%;
+    }
+    .card-tarif{
+        border-top: 2px solid;
+        margin-top: 0;
+    }
+    .border-tarif{
+        border-right: 0;
+    }
+    .secondary-text-project{
+        width: 80%;
+    }
+    .title-groupe-contact{
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 1024px) {
+    .groupe-card-logo {
+        width: 0%;
+    }
+}
+@media (max-width: 768px) {
+    .groupe-card-logo {
+        width: 100%;
     }
 }
