@@ -33,6 +33,12 @@ a{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c7c7c7;
+}
 li{
     padding-bottom: 20px;
 }
@@ -52,6 +58,38 @@ ul li::marker {
 .button-contact:hover{
     color: white;
     background-color: #000000;
+}
+.button-projet{
+    cursor: pointer;
+    margin-left: 22px;
+    font-size: 1.2em;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all ease-in-out 0.3s;
+}
+.button-projet:hover{
+    color: #ececec;
+    background-color: #000000;
+}
+.button-experience{
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all ease-in-out 0.3s;
+}
+.button-experience:hover{
+    color: #ff8b08;
+    background-color: #000000;
+}
+.href-button-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 h1{
     margin-top: 7px;
@@ -137,6 +175,41 @@ hr.animated-line {
     justify-content: center;
     flex-direction: column;
 }
+.groupe-tow{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #ececec;
+}
+.text-projet{
+    padding: 10px 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid #00000070;
+    margin-left: 10px;
+}
+.groupe-three{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8b08;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-experience{
+    padding: 10px 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 2px solid #00000070;
+}
+.text-projet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .text-groupe{
     display: flex;
     align-items: end;
@@ -145,7 +218,7 @@ hr.animated-line {
     margin-bottom: 20px;
     margin-left: 25px;
     margin-right: 25px;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-name: slidein-text-groupe;
 }
 .img-groupe{
@@ -343,6 +416,17 @@ hr.animated-line {
         opacity: 100%;
     }   
 }
+@keyframes slideup-title {
+    from {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+          
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}  
 @keyframes slidein-contact {
     from {
         transform: translateX(300px);
