@@ -403,6 +403,12 @@ hr.animated-line {
 .border-tarif{
     border-right: 2px solid;
 }
+/*experience*/
+.groupe-card-experience{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
 /*animation*/
 @keyframes slidein-text-groupe {
     from {
@@ -498,6 +504,8 @@ hr.animated-line {
     .img-groupe{
         margin-left: 35px;
     }
+}
+@media (max-width: 720px){
     .groupe-tow{
         grid-template-columns: 100%;
     }
