@@ -4,7 +4,6 @@ html{
     font-optical-sizing: auto;
     font-style: normal;
 }
-
 body{
     overflow-x: hidden;
     margin: 0;
@@ -186,7 +185,7 @@ hr.animated-line {
     border-bottom-left-radius: 500px;
     margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 5px;
+    margin-left: 25px;
 }
 .groupe-tow{
     display: grid;
@@ -219,9 +218,12 @@ hr.animated-line {
     border-left: 2px solid #00000070;
 }
 .text-projet{
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 20px;
+    border-left: 2px solid #ff8b08;
 }
 .text-groupe{
     z-index: 1;
@@ -234,6 +236,11 @@ hr.animated-line {
     margin-right: 25px;
     animation-duration: 1.5s;
     animation-name: slidein-text-groupe;
+}
+.groupe-four{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(85, 85, 85);
 }
 /* contact */
 .groupe-contact{
@@ -414,7 +421,14 @@ hr.animated-line {
     align-items: center;
     justify-content: center;
     margin-top: 0;
-    font-size: 2.5em;
+    font-size: 2em;
+}
+.info-experience{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.178);
+    border-top: 2px solid rgba(0, 0, 0, 0.178);
+    padding: 10px 30px;
+    padding-bottom: 15px;
+    font-size: 0.9em;
 }
 .groupe-card-experience{
     display: grid;
@@ -513,6 +527,9 @@ hr.animated-line {
     .contact-groupe-one{
         margin-right: 0;
     }
+    .contact-groupe-tow{
+        margin-left: 0;
+    }
 }
 @media screen and (max-width: 425px) {
     .call, .call-left, .call-right{
@@ -540,6 +557,12 @@ hr.animated-line {
         font-size: 1.5em;
     }
 }
+@media (max-width: 500px) {
+    header{
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+}
 @media (max-width: 630px){
     .groupe-one{
         grid-template-columns: 100%;
@@ -551,6 +574,8 @@ hr.animated-line {
 @media (max-width: 720px){
     .groupe-one{
         flex-direction: column;
+        display: flex;
+        align-items: end;
     }
     .left-content-one{
         width: 100%;
